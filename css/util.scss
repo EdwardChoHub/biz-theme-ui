@@ -1,0 +1,26 @@
+.e-button > button > .e-icon.e-pull-right,
+.e-button > input[type='button'] > .e-icon.e-pull-right,
+.e-button > input[type='submit'] > .e-icon.e-pull-right,
+.e-button > input[type='reset'] > .e-icon.e-pull-right{
+	margin-left: 10px;
+	align-self: center;
+	z-index: 0;
+	order: 1;
+	position: relative;
+}
+// reverse 前景背景对换
+.e-button.e-reverse > button,
+.e-button.e-reverse > input[type='button'],
+.e-button.e-reverse > input[type='submit'],
+.e-button.e-reverse > input[type='reset'] {
+	border: none;
+	@include fore-back-color(white, $active-color);
+}
+
+.e-button.e-reverse > button:active,
+.e-button.e-reverse > input[type='button']:active,
+.e-button.e-reverse > input[type='submit']:active,
+.e-button.e-reverse > input[type='reset']:active {
+	@include fore-back-color(inherit, white);
+	border: 1px solid $border-color;
+}

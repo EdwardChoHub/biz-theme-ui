@@ -1,0 +1,38 @@
+@import 'mixin.scss';
+
+$icon-color : #ccc;
+
+[class *= 'e-icon-']{
+	@include content-box-sizing;
+}
+
+.e-base-ignore,
+.e-icon-downarrow,
+.e-icon-leftarrow,
+.e-icon-rightarrow,
+.e-icon-uparrow,
+{
+	@include width-height(0,0);
+}
+
+.e-icon-downarrow{
+    border-top: 8px solid $icon-color;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.e-icon-uparrow{
+	border-bottom: 8px solid $icon-color;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+.e-icon-leftarrow{
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-right: 8px solid $icon-color;
+}
+.e-icon-rightarrow{
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-right: 8px solid $icon-color;
+}
+

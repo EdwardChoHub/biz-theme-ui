@@ -1,0 +1,235 @@
+.e-item{
+	//长单词数组强制换行
+	white-space:normal;
+	word-break:break-all;
+}
+
+.e-img{
+	width: auto;
+	height: 100%;
+}
+.e-img > img{
+	border-radius: 3px;
+	width: 100%;
+	height: auto;
+}
+
+.e-icon{
+	@include width-height(12px,12px,min);
+	@include width-height(48px,48px,max);
+}
+.e-icon > img{
+	border-radius: 5px;
+	height: 100%;
+	width: 100%;
+}
+.e-icon > *{
+	border-radius: 5px;
+	height: 100%;
+	width: 100%;
+}
+
+.e-list {
+	@include display-flex-flow-items(column wrap, flex-start);
+	@include border-radius(3px);
+	@include border-box-sizing;
+	border: 1px solid #ccc;
+}
+.e-list > .e-item {
+	@include select-none;
+	@include border-box-sizing;
+	@include border-radius(3px);
+	@include fore-back-color(inherit, white);
+	@include display-flex-flow-items(row nowrap, center);
+	
+	width: 100%;
+	line-height: 1.5em;
+	margin: -1px 0 0 0;
+	padding: 10px 15px;
+	font-size: inherit;
+	border: 1px solid $border-color;
+	cursor: pointer;
+	border-left: none;
+	border-right: none;
+}
+.e-list > .e-item:hover {
+	background-color: $background-color;
+}
+.e-list > .e-item.e-active {
+	@include fore-back-color(white, $active-color);
+}
+
+.e-nav {
+	@include display-flex-flow-items(row wrap);
+}
+.e-nav > .e-item {
+	padding: 0.5em 0.2em;
+	width: inherit;
+	line-height: 1.5em;
+	margin-top: -1px;
+	padding: 10px 15px 0px 15px;
+	@include font-color-size-family(inherit, 14px);
+	@include border-radius(3px);
+	@include select-none;
+	cursor: pointer;
+}
+.e-nav > .e-item:hover {
+	@include scale(all 0.5s, scale(1.1, 1.1));
+}
+.e-nav > .e-item.e-active {
+	border-bottom: 1px $active-color solid;
+}
+
+.e-corner {
+	@include content-box-sizing;
+	@include border-radius(50px);
+	@include width-height(19px, 23px, min);
+	@include width-height(19px, 23px, max);
+	@include fore-back-color(#f0f0f0, $active-color);
+	font-size: 12px;
+	padding: 2px 0 0 5px;
+	margin-left: auto;
+	cursor: pointer;
+	order: 1;
+}
+
+.e-button > button,
+.e-button > input[type='button'],
+.e-button > input[type='submit'],
+.e-button > input[type='reset'] {
+	align-self: flex-start;
+	@include display-flex-flow-items(row nowrap, center);
+	justify-content: center;
+	@include font-color-size-family();
+	@include width-height(auto, 3em);
+	padding: 10px 15px;
+	background-color: white;
+	border: $border-color 1px solid;
+	border-radius: 5px;
+	outline: none;
+	transition: all 0.2s ease;
+	min-width: 80px;
+}
+
+.e-button > button:active,
+.e-button > input[type='button']:active,
+.e-button > input[type='submit']:active,
+.e-button > input[type='reset']:active {
+	background-color: $background-color;
+}
+
+.e-switch{
+	@include display-flex-flow-items(row nowrap, center);
+	width: inherit;
+}
+.e-switch > label{
+	order: 0;
+}
+.e-switch > input[type='checkbox']{
+	@include appearance(none);
+	@include width-height(60px, 30px, min);
+	@include border-radius(30px);
+	background-color: #dadada;
+	order: 1;
+	margin-left: 4em;
+	position: relative;
+	outline: none;
+	border: none;
+	transition: all 0.2s ease;
+}
+.e-switch > input[type='checkbox']::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include width-height(50%, 100%);
+	@include border-radius(50%);
+	background-color: #FFFFFF;
+	transition: all 0.2s ease;
+}
+.e-switch > input[type='checkbox']:checked{
+	background-color: $active-color;
+}
+.e-switch > input[type='checkbox']:checked::after{
+	left: 50%;
+}
+.e-switch.e-full-width > input[type = 'checkbox']{
+	margin-left: auto;
+}
+
+.e-input-row{
+	@include display-flex-flow-items(row nowrap, center);
+	margin: 0.5em;
+	width: auto;
+	outline: none;
+}
+.e-input-row > input{
+	order: 0;
+	border: #DADADA 1px solid;
+	@include border-radius(5px);
+	height: auto;
+	padding: 5px 10px;
+	@include font-color-size-family(inherit, inherit);
+}
+.e-input-row > label{
+	min-width: 4em;
+	order: -1;
+}
+
+.e-radio,
+.e-checkbox{
+	@include display-flex-flow-items(row nowrap, center);
+}
+
+.e-radio > label,
+.e-checkbox > label{
+	order: 1;
+	padding-left: 0.2em;
+}
+
+.e-radio > input[type='radio'],
+.e-checkbox > input[type='checkbox']{
+	order: 0;
+	@include appearance(none);
+	@include width-height(20px,20px,min);
+	
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+.e-radio > input[type='radio']:checked,
+.e-checkbox > input[type='checkbox']:checked{
+	background-color: $active-color;
+	border-color: $active-color;
+}
+
+.e-radio > input[type='radio']:checked::before,
+.e-checkbox > input[type='checkbox']:checked::before{
+	content: "";
+	display: inline-block;
+	border-top: 8px solid white;
+	border-left: 2px solid white;
+	position: relative;
+	left: 5px;
+	transform: rotate(-30deg);
+	
+}
+
+.e-radio > input[type='radio']:checked::after,
+.e-checkbox > input[type='checkbox']:checked::after{
+	content: "";
+	display: inline-block;
+	border-top: 14px solid white;
+	border-left: 2px solid white;
+	position: relative;
+	left: 10px;
+	transform: rotate(45deg);
+}
+
+.e-radio > input[type='radio']{
+	@include border-radius(50px);
+}
+
+.e-checkbox > input[type='checkbox']{
+	@include border-radius(3px);
+}

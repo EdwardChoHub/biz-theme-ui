@@ -1,0 +1,47 @@
+// 变量
+@import 'var.scss';
+// scss函数
+@import 'mixin.scss';
+// 布局
+@import 'layout.scss';
+// 基类
+@import 'base.scss';
+// css图标
+@import 'icon.scss';
+// 组件类
+@import 'module.scss';
+// 高级组件
+@import 'moduler.scss';
+// 组件辅助类
+@import 'util.scss';
+
+body *{
+	margin: 0.1em;
+	padding: 0;
+	@include border-box-sizing;
+	@include select-none;font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+form{
+	margin: 1em;
+}
+form > *{
+	margin-bottom: 1em;
+}
+form > .e-input-row{
+	margin-bottom: 1em;
+}
+
+/* 小屏幕兼容 */
+/* @media all and (max-width:800px) {
+	.col-1{width: 33.33%;}
+	.col-2{width: 50%;}
+	.col-3{width: 83.33%;}
+	.col-4,
+	.col-5,
+	.col-6{
+		width: 100%;
+	}
+	.row .col-2:last-of-type{width: 100%;}
+	.row .col-5 ~ .col-1{width: 100%;}
+} */

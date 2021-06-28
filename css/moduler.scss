@@ -1,0 +1,35 @@
+//固定内容输入框
+.e-input-row.e-input-fixed > input{
+	order: 0;
+	border: #DADADA 1px solid;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	height: auto;
+	padding: 5px 10px;
+	@include font-color-size-family(inherit, inherit);
+	margin-right: 0;
+}
+.e-input-row.e-input-fixed > span{
+	margin-left: -1px;
+	margin-right: 0;
+	border: 1px solid #dadada;
+	padding: 5px 5px;
+}
+.e-input-row.e-input-fixed > .e-pullmenu{
+	margin: 0 -1px;
+	height: auto;
+}
+.e-input-row.e-input-fixed > .e-pullmenu > .e-list{
+	margin-top: 32px;
+	margin-left: -1px;
+}
+.e-input-row.e-input-fixed > .e-pullmenu > .e-button{
+	margin-left: -1px;
+	padding-left: 0;
+}
+.e-input-row.e-input-fixed > .e-pullmenu > .e-button > button{
+	height: auto;
+	padding: 5px 30px 5px 15px;
+	margin: 0;
+	
+}

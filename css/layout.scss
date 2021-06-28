@@ -1,0 +1,65 @@
+@each $i in (1,2,3,4,5,6,7,8){
+	.e-grid-#{$i}{
+		width: ((10/8 * $i * 10) + vw);
+		height: auto;
+	}
+}
+
+.e-pull-left-top{
+	align-self: flex-start;
+}
+
+.e-pull-top{
+	margin:0 auto;
+	margin-bottom: auto;
+	align-self: flex-start;
+}
+
+.e-pull-right-top{
+	margin-left: auto;
+	align-self: flex-start;
+}
+
+.e-pull-left{
+	margin-right: auto;
+	align-self: center;
+}
+
+.e-pull-center{
+	margin: 0 auto;
+	align-self: center;
+}
+
+.e-pull-right{
+	margin-left: auto;
+	align-self: center;
+}
+
+.e-pull-left-bottom{
+	margin-right: auto;
+	align-self: flex-end;
+}
+
+.e-pull-bottom{
+	margin: 0 auto;
+	align-self: flex-end;
+	
+}
+
+.e-pull-right-bottom{
+	margin-left: auto;
+	align-self: flex-end;
+}
+
+.e-reverse-row{
+	flex-direction: row-reverse;
+}
+.e-reverse-col{
+	flex-direction: column-reverse;
+}
+.e-nowrap{
+	flex-wrap: nowrap;
+}
+.e-wrap{
+	flex-wrap: wrap;
+}

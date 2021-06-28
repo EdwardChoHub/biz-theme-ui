@@ -1,0 +1,15 @@
+$map-colors: (
+	dark: #3b3f50,
+	light: #f0f0f0,
+	light-grey: #dadada,
+	grey: #7c8194,
+	blue: #47aafe,
+	deep-blue: #275ab7,
+	red: #f96868,
+	yellow: #ffae6b,
+	green: #59d99e,
+	pink: #f6a1a1
+);
+$active-color: map-get($map-colors, deep-blue);
+$border-color: #ccc;
+$background-color: #f5f5f5;

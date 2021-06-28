@@ -1,0 +1,65 @@
+@mixin scale($transition, $transform){
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	transform: $transform;
+	transition: $transition;
+	-moz-transition: $transition;
+	-webkit-transition: $transition;
+}
+@mixin select-none() {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@mixin overflow-hide() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin border-box-sizing{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+@mixin content-box-sizing{
+	box-sizing:content-box;
+	-moz-box-sizing:content-box; /* Firefox */
+	-webkit-box-sizing:content-box; /* Safari */
+}
+@mixin border-radius($value){
+	-moz-border-radius: $value;
+	-webkit-border-radius: $value;
+	border-radius: $value;
+}
+@mixin width-height($width:auto, $height:auto, $type: default) {
+	@if $type == min{
+		min-width: $width;
+		min-height: $height;
+	}@else if $type == max{
+		max-width: $width;
+		max-height: $height;
+	}@else if $type == default{
+		width: $width;
+		height: $height;
+	}
+}
+@mixin display-flex-flow-items($flow:row nowrap,$align-items:flex-start) {
+	display: flex;
+	flex-flow: $flow;
+	align-items: $align-items;
+}
+@mixin fore-back-color($fore:inherit, $back:inherit){
+	color: $fore;
+	background-color: $back;
+}
+@mixin font-color-size-family($color:inherit, $size:inherit, $family:inherit){
+	color: $color;
+	font-size: $size;
+	font-family: $family;
+}
+@mixin appearance($value){
+	appearance: $value;
+	-webkit-appearance: $value;
+	-moz-appearance: $value;
+}
